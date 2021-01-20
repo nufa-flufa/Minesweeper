@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.smiley-face{
+    height: 50px;
+    width: 50px;
+    padding: 1px;
+    font-size: 30px;
+    text-align: center;
+    border: lightslategray 3px outset;
+}
+.smiley-face:hover{
+    border: rgb(159, 167, 175) 3px inset;
+    cursor: pointer;
+}
+
+.game-display{
+    margin: 20px;
+    background-color: lightslategray;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.life-display{
+    width: 90px;
+    height: 40px;
+    background-color: lightgray;
+    margin: 5px;
+    font-size: 28px;
+}
+.hints{
+    width: 90px;
+    height: 40px;
+    background-color: lightgray;
+    margin: 5px;
+    font-size: 28px; 
+    left: 45px;
+}
+
+button{
+    margin-top: 10px;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+}
+table{
+    margin-top:30px;
+}
+.cell{
+    background-color:lightgray;
+    border: 3px outset rgb(216, 215, 215);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.bombed{
+    background-color: red;
+}
+.cell:hover{
+    border: 3px inset rgb(216, 215, 215);
+}
