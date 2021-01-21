@@ -189,6 +189,7 @@ function expandNegs(coords) {
             var currCell = gBoard[i][j];
             if (currCell.isShown) continue;
             currCell.isShown = true;
+            if(!currCell.minesAroundCount) expandNegs({i,j})
             renderCell(i, j, currCell.minesAroundCount);
             var elCell = getCellClass(i, j);
             elCell.classList.add('clicked');
