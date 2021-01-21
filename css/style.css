@@ -10,7 +10,6 @@ body{
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     margin-top: 20px;
-
 }
 
 table{
@@ -23,7 +22,6 @@ table{
     align-items: center;
     flex-direction: column;
 }
-
 
 .smiley-face{
     margin-top: 20px;
@@ -57,6 +55,7 @@ table{
     margin: 3px;
     font-size: 28px;
 }
+
 .hints{
     width: 90px;
     height: 40px;
@@ -64,6 +63,13 @@ table{
     font-size: 28px; 
     left: 45px;
     cursor: pointer;
+    font-size: 23px;
+    transition-duration: 0.5s;
+    border: 3px outset rgb(156, 156, 156);
+    background-color: rgb(196, 196, 196);
+}
+.hints:hover{
+    box-shadow: 0px 24px 21px 2px rgba(0,0,0,0.76);
 }
 
 .levels{
@@ -77,6 +83,9 @@ table{
     border-radius: 3px;
     border: 3px outset rgb(156, 156, 156);
     background-color: rgb(196, 196, 196);
+}
+.levels button:hover{
+    border: 3px outset rgb(192, 192, 192);
 }
 
 button{
@@ -104,7 +113,6 @@ button{
     border: 3px inset rgb(228, 228, 228);
     background-color: rgb(184, 182, 182);
 }
-
 .bombed{
     background-color: red;
 }
@@ -140,7 +148,6 @@ h2{
     background-image: url(../imgs/scoreboard.jpg);
 }
 .timer{
-    /* border: 2px solid black; */
     top: 0;
     text-align: center;
     height: 80px;
