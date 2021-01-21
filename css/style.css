@@ -3,15 +3,30 @@
 }
 
 body{
-    background-color: black;
+    background-color:cadetblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    margin-top: 20px;
+
+}
+
+table{
+    margin-top:5px;
+}
+
+.board-display{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-
 }
+
+
 .smiley-face{
+    margin-top: 20px;
     height: 50px;
     width: 50px;
     padding: 1px;
@@ -26,37 +41,55 @@ body{
 
 .game-display{
     margin: 20px;
-    background-color: lightslategray;
-    width: 300px;
+    background-color:lightgrey;
+    border-radius: 3px;
+    border: darkgray 2px outset;
+    width: 80%;
     height: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 .life-display{
     width: 90px;
     height: 40px;
     background-color: lightgray;
-    margin: 5px;
+    margin: 3px;
     font-size: 28px;
 }
 .hints{
     width: 90px;
     height: 40px;
-    background-color: lightgray;
-    margin: 5px;
+    margin: 3px;
     font-size: 28px; 
     left: 45px;
+    cursor: pointer;
+}
+
+.levels{
+    left: 0;
+    margin-top: 2.5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.levels button{
+    border-radius: 3px;
+    border: 3px outset rgb(156, 156, 156);
+    background-color: rgb(196, 196, 196);
 }
 
 button{
-    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 20px;
     height: 40px;
-    width: 80px;
+    width:100px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 20px;
     cursor: pointer;
+    background-color:lightgray;
 }
-table{
-    margin-top:30px;
-}
+
 .cell{
     background-color:lightgray;
     border: 3px outset rgb(216, 215, 215);
@@ -64,10 +97,70 @@ table{
     width: 40px;
     text-align: center;
     cursor: pointer;
+    font-size: 20px;
+    font-family: fantasy;
 }
+.clicked{
+    border: 3px inset rgb(228, 228, 228);
+    background-color: rgb(184, 182, 182);
+}
+
 .bombed{
     background-color: red;
 }
-.cell:hover{
-    border: 3px inset rgb(216, 215, 215);
+
+.board-and-bestscore{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 70%;
+    width: 70%;
+    border-radius: 3px;
 }
+
+.best-score-display{
+    background-color:lightgrey;
+    border-radius: 3px;
+    border: darkgray 4px outset;
+    color: black;
+    margin-right: 40px;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 30px;
+}
+
+h2{
+    margin-top: 0;
+    height: 112px;
+    width: 392px;
+    border-radius: 3px;
+    background-image: url(../imgs/scoreboard.jpg);
+}
+.timer{
+    /* border: 2px solid black; */
+    top: 0;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    font-size: 37px;
+}
+.best-score{
+    display: flex;
+    flex-direction: column;
+}
+.best-score span{
+    padding: 2px;
+    height: 96px;
+    width: 392px;
+    border: 4px ridge rgba(95, 158, 160, 0.582);
+    border-radius: 3px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+  

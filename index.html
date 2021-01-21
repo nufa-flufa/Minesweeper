@@ -9,21 +9,36 @@
 </head>
 
 <body onload="init()">
-    <div class="levels">
-        <button onclick="setMode('easy')">Easy</button>
-        <button onclick="setMode('hard')">Hard</button>
-        <button onclick="setMode('expert')">Expert</button>
-    </div>
+
     <div class="game-display">
         <div class="life-display"></div>
-        <div class="hints" onclick="hints()">hints</div>
+        <div class="levels">
+            <button onclick="setMode('easy')">Easy</button>
+            <button onclick="setMode('hard')">Hard</button>
+            <button onclick="setMode('expert')">Expert</button>
+        </div>
+        <div class="hints" onclick="hintMode()">Hints</div>
     </div>
-    <button class="smiley-face" onclick="init()"></button>
-    <table class="board">
-    </table>
-   
+
+    <div class="board-and-bestscore">
+        <div class="best-score-display">
+            <h2></h2>
+            <div class="timer">00:00</div>
+            <div class="best-score easy">Easy Mode:<span></span></div>
+            <div class="best-score hard">Hard Mode:<span></span></div>
+            <div class="best-score expert">Expert Mode:<span></span></div>
+        </div>
+        <div class="board-display">
+            <button class="smiley-face" onclick="init()"></button>
+            <table class="board">
+            </table>
+        </div>
+    </div>
+
     <script src="js/utils.js"></script>
     <script src="js/board.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/timer.js"></script>
     <script src="js/main.js"></script>
 </body>
 
