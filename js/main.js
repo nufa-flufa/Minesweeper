@@ -10,6 +10,10 @@ const HINT_IMG = '👀';
 
 var gBoard;
 var gIsGameWon;
+var gBestScoreEasy = Infinity;
+var gBestScoreHard = Infinity;
+var gBestScoreExpert = Infinity;
+
 var gGame = {
     isOn: true,
     shownCount: 0,
@@ -148,7 +152,7 @@ function cellMarked(elCell, i, j) {
     // }
     currCell.isMarked = !currCell.isMarked;
     var markedCellStyle = currCell.isMarked ? FLAG : ''
-    gGame.markedCount = currCell.isMarked ?  gGame.markedCount+=1: gGame.markedCount -= 1;
+    gGame.markedCount = currCell.isMarked ? gGame.markedCount += 1 : gGame.markedCount -= 1;
     elCell.innerText = markedCellStyle;
     checkVictory();
 }
@@ -189,7 +193,7 @@ function expandNegs(coords) {
             var currCell = gBoard[i][j];
             if (currCell.isShown) continue;
             currCell.isShown = true;
-            if(!currCell.minesAroundCount) expandNegs({i,j})
+            if (!currCell.minesAroundCount) expandNegs({ i, j })
             renderCell(i, j, currCell.minesAroundCount);
             var elCell = getCellClass(i, j);
             elCell.classList.add('clicked');
@@ -231,31 +235,29 @@ function countShownCellsOnBoard() {
 function bestScore(level) {
     var elBestScores = document.querySelectorAll('.best-score span')
     var timeStamp = stopWatch()
-
     if (level === 4) {
         var elBestScoreEasy = elBestScores[0]
         var currScoreEasy = gGame.secsPassed;
-
-        var bestScoreEasy = 0;
-        if (currScoreEasy > bestScoreEasy) {
-            bestScoreEasy = currScoreEasy
+        if (currScoreEasy < gBestScoreEasy) {
+            console.log('curr score:', currScoreEasy)
+            console.log('best score:', gBestScoreEasy)
+            gBestScoreEasy = currScoreEasy
+            console.log('best score:', gBestScoreEasy)
             elBestScoreEasy.innerText = '\n' + timeStamp
         }
     } else if (level === 8) {
         var elBestScoreHard = elBestScores[1]
         var currScoreHard = gGame.secsPassed;
-        var bestScoreHard = 0;
-        if (currScoreHard > bestScoreHard) {
-            bestScoreHard = currScoreHard
+        if (currScoreHard < gBestScoreHard) {
+            gBestScoreHard = currScoreHard
             elBestScoreHard.innerText = '\n' + timeStamp
         }
     } else {
         var elBestScoreExpert = elBestScores[2]
         var currScoreExpert = gGame.secsPassed;
 
-        var bestScoreExpert = 0;
-        if (currScoreExpert > bestScoreExpert) {
-            bestScoreExpert = currScoreExpert
+        if (currScoreExpert < gBestScoreExpert) {
+            gBestScoreExpert = currScoreExpert
             elBestScoreExpert.innerText = '\n' + timeStamp
         }
     }
