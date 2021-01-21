@@ -1,2 +1,2 @@
 # Minesweeper
-first submission
+second submission
