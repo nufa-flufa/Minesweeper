@@ -31,7 +31,6 @@ function countMineNegsAround(cellI, cellJ) {
 
 }
 
-
 function findAllMinesOnBoard() {
     var mines = [];
     for (var i = 0; i < gLevel.SIZE; i++) {

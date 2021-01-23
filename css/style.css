@@ -24,7 +24,6 @@ table{
 }
 
 .smiley-face{
-    margin-top: 20px;
     height: 50px;
     width: 50px;
     padding: 1px;
@@ -38,7 +37,7 @@ table{
 }
 
 .game-display{
-    margin: 20px;
+    margin: 8px;
     background-color:lightgrey;
     border-radius: 3px;
     border: darkgray 2px outset;
@@ -87,7 +86,19 @@ table{
 .levels button:hover{
     border: 3px outset rgb(192, 192, 192);
 }
-
+.safe-click{
+    width: 130px;
+    height: 40px;
+    margin: 3px;
+    font-size: 28px; 
+    left: 45px;
+    cursor: pointer;
+    font-size: 23px;
+    transition-duration: 0.5s;
+    border: 3px outset rgb(156, 156, 156);
+    background-color: rgba(104, 228, 236, 0.788);
+    font-size: 15px;
+}
 button{
     margin-left: 30px;
     margin-right: 20px;
@@ -166,6 +177,14 @@ h2{
     border-radius: 3px;
     font-size: 30px;
     margin-bottom: 10px;
+}
+
+.flags-count{
+    font-size: 20px;
+}
+
+.mines-num{
+    font-size: 20px;
 }
 
 

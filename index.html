@@ -16,6 +16,7 @@
             <button onclick="setMode('hard')">Hard</button>
             <button onclick="setMode('expert')">Expert</button>
         </div>
+        <button class="safe-click" onclick="safeClick()"><span></span> Safe Click</button>
         <div class="hints" onclick="hintMode()">Hints</div>
     </div>
 
@@ -31,6 +32,8 @@
             <button class="smiley-face" onclick="init()"></button>
             <table class="board">
             </table>
+            <div class="flags-count">Cells marked: <span></span></div>
+            <div class="mines-num">Mines to find: <span></span></div>
         </div>
     </div>
 
